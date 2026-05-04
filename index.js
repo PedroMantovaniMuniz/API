@@ -2,8 +2,6 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-const port = process.env.PORT || 4000;
-
 const app = express();
 app.use( express.json() );
 app.use( cors() );
@@ -33,6 +31,6 @@ app.post( '/users', async ( req, res ) => {
     res.status( 201 ).json( createdUser );
 } );
 
-app.listen( port, () => {
-    console.log( `Server is running on port ${port}` );
+app.listen( 3000, () => {
+    console.log( `Server is running on port 3000` );
 } );
